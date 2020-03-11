@@ -1,4 +1,4 @@
-# todolist
+# client
 
 ## Project setup
 ```
