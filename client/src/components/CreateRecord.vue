@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  props: ["placeholder", "value"]
+  props: ['placeholder', 'value'],
 };
 </script>
 

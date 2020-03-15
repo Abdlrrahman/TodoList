@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from "vuex";
-import CreateRecord from "@/components/CreateRecord.vue";
-import EditableRecord from "@/components/EditableRecord.vue";
+import { mapActions, mapMutations, mapState } from 'vuex';
+import CreateRecord from '@/components/CreateRecord.vue';
+import EditableRecord from '@/components/EditableRecord.vue';
 
 export default {
   mounted() {
@@ -34,30 +34,30 @@ export default {
   },
   components: {
     CreateRecord,
-    EditableRecord
+    EditableRecord,
   },
   computed: {
-    ...mapState("projects", ["newProjectName", "projects"])
+    ...mapState('projects', ['newProjectName', 'projects']),
   },
   methods: {
     projectClicked(project) {
       this.setCurrentProject(project);
       this.fetchTasksForProject(project);
     },
-    ...mapMutations("projects", [
-      "setNewProjectName",
-      "setEditMode",
-      "setProjectTitle",
-      "setCurrentProject"
+    ...mapMutations('projects', [
+      'setNewProjectName',
+      'setEditMode',
+      'setProjectTitle',
+      'setCurrentProject',
     ]),
-    ...mapActions("projects", [
-      "createProject",
-      "fetchProjects",
-      "saveProject",
-      "deleteProject"
+    ...mapActions('projects', [
+      'createProject',
+      'fetchProjects',
+      'saveProject',
+      'deleteProject',
     ]),
-    ...mapActions("tasks", ["fetchTasksForProject"])
-  }
+    ...mapActions('tasks', ['fetchTasksForProject']),
+  },
 };
 </script>
 

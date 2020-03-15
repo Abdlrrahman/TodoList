@@ -5,28 +5,32 @@
         <Projects></Projects>
       </v-flex>
 
-      <v-flex xs8 class="pl-4" v-if="currentProject"></v-flex>
+      <v-flex xs8 class="pl-4" v-if="currentProject">
+        <Tasks></Tasks>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
-import Projects from "@/components/Projects.vue";
-import router from "../router";
+import { mapGetters, mapState } from 'vuex';
+import Projects from '@/components/Projects.vue';
+import Tasks from '@/components/Tasks.vue';
+import router from '../router';
 
 export default {
   components: {
-    Projects
+    Projects,
+    Tasks,
   },
   mounted() {
     if (!this.isLoggedIn) {
-      return router.push("/login");
+      return router.push('/login');
     }
   },
   computed: {
-    ...mapState("projects", ["currentProject"]),
-    ...mapGetters("authentication", ["isLoggedIn"])
-  }
+    ...mapState('projects', ['currentProject']),
+    ...mapGetters('authentication', ['isLoggedIn']),
+  },
 };
 </script>
