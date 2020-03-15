@@ -15,6 +15,7 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 sync(store, router);
 
+
 new Vue({
   router,
   store,
