@@ -5,9 +5,7 @@
         <Projects></Projects>
       </v-flex>
 
-      <v-flex xs8 class="pl-4" v-if="currentProject">
-        <Tasks></Tasks>
-      </v-flex>
+      <v-flex xs8 class="pl-4" v-if="currentProject"></v-flex>
     </v-layout>
   </v-container>
 </template>
